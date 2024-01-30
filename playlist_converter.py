@@ -3,6 +3,9 @@ import json
 from ytmusicapi import YTMusic
 
 # access token
+'''
+No longer have an access token due to not paying for apple developer program ($99)
+'''
 ACCESS_TOKEN = ''
 
 # playlist id
@@ -10,9 +13,9 @@ playlist_id = "p.AWXoLZ4HPAq1eD"
 # API endpoint
 get_playlist_api = f'https://api.music.apple.com/v1/me/library/playlists/{playlist_id}'
 
-# no longer have an authorization token due to having to pay $99
+
 headers = {
-    'Authorization': 'BEARER ACCESS_TOKEN'
+    'Authorization': f'BEARER {ACCESS_TOKEN}'
 }
 
 response = requests.get(get_playlist_api, headers=headers)
